@@ -49,3 +49,20 @@ console.log(s.substring(0,5).toUpperCase()); //method to get substring and conve
 console.log(s.split('')); //method to split string into array
 
 //arrays - variables that hold multiple values
+
+//array using constructor
+const numbers = new Array(1,2,3,4,5); //array using constructor
+console.log(numbers);
+
+//array using literal
+const fruits = ['apples', 'oranges', 'pears', 10, true]; //array using literal
+console.log(fruits); //prints the array
+console.log(fruits[1]); //[] -- this forcuses on the index of the array
+fruits[5] = 'grapes'; //this will add grapes to the array
+
+fruits.push('mangos'); //this will add mangos to the end of the array
+fruits.unshift('strawberries'); //this will add strawberries to the beginning of the array
+fruits.pop(); //removes the last element from the array
+
+console.log(Array.isArray(fruits)); //this will check if the variable is an array or not
+console.log(fruits.indexOf('oranges')); //this will return the index of the element
