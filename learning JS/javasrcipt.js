@@ -118,3 +118,27 @@ console.log(todos[1].text); //prints the text of the second object in the array
 //converting to JSON
 const todoJSON = JSON.stringify(todos); //converts the array of objects to JSON string
 console.log(todoJSON); //prints the JSON string
+
+
+//loops
+//for loops
+for(let i = 0; i <= 10; i++){ // for loop copndidiotn
+    console.log('for loop number: ' + i); //prints the loop number
+}
+
+//while loop
+let i = 0;
+hi = 5; //initialization
+while(i < hi) { //condiition
+    console.log(`while loop number is: ${i}`); //prints the loop number
+    i++; //increment
+}
+
+for(let i = 0; i < todos.length; i++){ // for loop copndidiotn
+    console.log(todos[i].id, todos[i].text, todos[i].isCompleted);
+}
+
+//for of loop
+for (let todo of todos) {
+    console.log(todo.id, todo.text, todo.isCompleted);  
+}
