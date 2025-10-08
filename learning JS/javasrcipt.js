@@ -66,3 +66,55 @@ fruits.pop(); //removes the last element from the array
 
 console.log(Array.isArray(fruits)); //this will check if the variable is an array or not
 console.log(fruits.indexOf('oranges')); //this will return the index of the element
+
+
+//object literals 
+const Person = { //object
+    firstName: 'jhon',
+    lastName: 'doe',
+    age: 30,
+    hobbies: ['music', 'movies', 'sports'], //array
+    address: {  //nested object
+        street: '50 main street',
+        city: 'Boston',
+        state: 'MA'
+    }
+};
+
+Person.email = 'jhon@gmail.com'; //this will add email to the object
+
+console.log(Person); //prints the object
+console.log('this person is: '+ Person.firstName, Person.lastName); //prints the targetted values
+console.log('this persons email is: '+Person.email); //prints the email
+
+
+//arrays of objects
+const todos = [ //array of objects
+    {
+        id : 1,
+        text: 'Take Out Trash',
+        isCompleted: false
+    },
+    {
+        id : 2,
+        text: 'Meeting with Boss',
+        isCompleted: true
+    },
+        {
+        id : 3,
+        text: 'Dentist Appointment',
+        isCompleted: false
+    },
+    {
+        id : 4,
+        text: 'play with kids', //lmoa we need reminders for this???
+        isCompleted: false
+    }
+];
+
+console.log(todos); //prints the array of objects
+console.log(todos[1].text); //prints the text of the second object in the array
+
+//converting to JSON
+const todoJSON = JSON.stringify(todos); //converts the array of objects to JSON string
+console.log(todoJSON); //prints the JSON string
