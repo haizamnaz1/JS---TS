@@ -103,7 +103,7 @@ const todos = [ //array of objects
         {
         id : 3,
         text: 'Dentist Appointment',
-        isCompleted: false
+        isCompleted: true
     },
     {
         id : 4,
@@ -142,3 +142,27 @@ for(let i = 0; i < todos.length; i++){ // for loop copndidiotn
 for (let todo of todos) {
     console.log(todo.id, todo.text, todo.isCompleted);  
 }
+
+
+///high order array methods -- forEach, map, filter
+//foreach
+todos.forEach(function(todo) { //forEach method
+    console.log(todo.text); //prints the text of each object in the array
+});
+
+//foreach
+const todoText = todos.map(function(todo) { //map method
+    return todo.text //prints the text of each object in the array
+});
+
+console.log(todoText); //prints the array of text
+
+//filter
+
+const todotext = todos.filter(function(todo) { //filter method
+    return todo.isCompleted === true;//prints the text of each object in the array
+}).map(function(todo) {
+    return todo.text ; //prints the text of each object in the array
+});
+
+console.log(todotext);
