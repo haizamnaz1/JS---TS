@@ -229,3 +229,29 @@ const addnums = (Num1, Num2) => //arrow function
 }
 
 console.log(addnums(10,13)); //calls the function
+
+
+//Object oriented programming
+//constructor function - used to create multiple objects
+function human(firstName, LastName, dob)
+{
+    this.firstName = firstName; //this refers to the object
+    this.LastName = LastName;
+    this.dob = new Date(dob); //converts the string to date object
+}
+
+human.prototype.getBirthYear = function() //adding method to the prototype
+{
+    return this.dob.getFullYear(); //gets the full year from the date object
+}
+human.prototype.getFullName = function() //adding method to the prototype
+{
+    return `${this.firstName} ${this.LastName}`; //returns the full name
+}
+//instantiate object
+const human1 = new human('Jhon', 'Doe', '4-5-1990'); //creates a new object
+const human2 = new human('Mary', 'Smith', '3-6-1980'); //creates a new object
+
+console.log(human1); //prints the object
+console.log(human1.getBirthYear());
+console.log(human1.getFullName());
