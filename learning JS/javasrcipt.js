@@ -166,3 +166,30 @@ const todotext = todos.filter(function(todo) { //filter method
 });
 
 console.log(todotext);
+
+
+//conditional statements
+const a = 20;
+const b = 10;
+
+if(a > b && b < a) // && means and, || means or
+    {
+        console.log(`a is greater than b`);
+    }
+
+if (a == 20 || b == 10) {
+    console.log('this statement is correct');
+}
+
+if(a === '10') { //== checks only value and  === checks value and type
+    console.log('a is 10');
+} 
+else if (a > 10)
+{   
+    console.log('a is greater than 10');
+}
+else 
+{
+    console.log('a is less than 10');
+}
+
