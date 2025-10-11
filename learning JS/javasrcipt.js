@@ -193,3 +193,20 @@ else
     console.log('a is less than 10');
 }
 
+//ternary operator
+const c = 11;
+const color = c > 10 ? 'red' : 'blue'; //if c is greater than 10 then color is red else color is blue
+// '?' is the if and ':' is the else
+console.log(color);
+    //switch
+switch(color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is not red or blur');
+        break;
+}
