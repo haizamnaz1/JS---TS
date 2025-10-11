@@ -210,3 +210,22 @@ switch(color) {
         console.log('color is not red or blur');
         break;
 }
+
+
+
+//function - a block of code that performs a specific task
+
+function addNums(num1, num2) //function declaration
+{
+    return num1 + num2; //adds num1 and num2 and returns the value
+
+}
+console.log(addNums(50,13)); 
+
+const addnums = (Num1, Num2) => //arrow function
+{
+    return Num1 + Num2; //adds num1 and num2 and returns the value
+
+}
+
+console.log(addnums(10,13)); //calls the function
