@@ -9,7 +9,10 @@ body {
     background-color: #f4f4f4;
     line-height: 1.6;
 }
-
+.bg-dark{
+    background-color: black;
+    color: white;
+}
 .container {
     max-width: 600px;
     margin: 2rem auto;
