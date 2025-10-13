@@ -255,3 +255,25 @@ const human2 = new human('Mary', 'Smith', '3-6-1980'); //creates a new object
 console.log(human1); //prints the object
 console.log(human1.getBirthYear());
 console.log(human1.getFullName());
+
+//classes
+
+class Person1 {
+    constructor(firstName, LastName, dob) //constructor method
+    {
+        this.firstName = firstName; //this refers to the object
+        this.LastName = LastName;
+        this.dob = new Date(dob); //converts the string to date object
+    }
+    getBirthYear() //method
+    {
+        return this.dob.getFullYear(); //gets the full year from the date object
+    }
+    getFullName() //method
+    {
+        return `${this.firstName} ${this.LastName}`; //returns the full name
+    }
+}
+
+const Person2 = new Person1('Jhon', 'Doe', '4-5-1990'); //creates a new object
+console.log(Person2);
