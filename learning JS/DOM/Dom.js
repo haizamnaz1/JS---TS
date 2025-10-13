@@ -1,29 +1,33 @@
-//single elemant selector and multi elemant selector
 
-//single elemant selector
-console.log(document.getElementById("contact-form"));
-console.log(document.querySelector(".container"));  //for single elemant selector
-console.log(document.getElementsByClassName("form-group")); //for multiple elemant selector
+const myform = document.querySelector('.container');
+const nameinput = document.querySelector('#name');
+const emailinput = document.querySelector('#email');
+const userlist = document.querySelector('.users');
+const msg = document.querySelector('.msg');
 
-const items =document.querySelectorAll('.item');
-items.forEach((item) => console.log(item)); //for multiple elemant selector
+myform.addEventListener('submit', onSubmit);
 
-//manipulating the DOM
-const ul = document.querySelector('.items');
-//ul.remove(); -- removes the elemant
-//ul.lastElementChild.remove(); -- removes the last elemant
-ul.firstElementChild.textContent = "hello"; //changes the text of first elemant
-ul.children[1].innerText = 'Brad';  //changes the text of second elemant
-ul.children[2].innerHTML =  '<h1>hello</h1>';   //changes the text of third elemant to h1
-
-const btn = document.querySelector('.btn');
-//btn.style.background= 'red'; //changes the background color of button
-
-//events
-btn.addEventListener('click', (e)=>{ //e is event object
+function onSubmit(e){
     e.preventDefault();
-   document.querySelector('.container').style.background = '#FA003F';
-    document.querySelector('body').classList.add('bg-dark');
-    document.querySelector('.items').lastElementChild.innerHTML = '<h1>yo</h1>';
-});
+    console.log(nameinput.value);
 
+    if(nameinput.value === '' || emailinput.value === '')
+    {
+        msg.classList.add('error');
+        msg.innerHTML = '  Please enter all fields';
+        msg.style.color = 'white';
+        msg.style.backgroundColor = 'red';
+
+        setTimeout(() => msg.remove(), 3000);
+    }
+    else
+    {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameinput.value} : ${emailinput.value}`));
+        userlist.appendChild(li);
+
+        //clear fields
+        nameinput.value = '';
+        emailinput.value = '';
+    } 
+}
