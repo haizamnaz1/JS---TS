@@ -17,4 +17,13 @@ ul.children[1].innerText = 'Brad';  //changes the text of second elemant
 ul.children[2].innerHTML =  '<h1>hello</h1>';   //changes the text of third elemant to h1
 
 const btn = document.querySelector('.btn');
-btn.style.background= 'red'; //changes the background color of button
+//btn.style.background= 'red'; //changes the background color of button
+
+//events
+btn.addEventListener('click', (e)=>{ //e is event object
+    e.preventDefault();
+   document.querySelector('.container').style.background = '#FA003F';
+    document.querySelector('body').classList.add('bg-dark');
+    document.querySelector('.items').lastElementChild.innerHTML = '<h1>yo</h1>';
+});
+
