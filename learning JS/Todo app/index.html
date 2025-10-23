@@ -8,53 +8,44 @@
 </head>
 <body>
 <div class="app-container">
-    <!--this will be the sidebar features-->
     <aside class="sidebar">
-        <h2 class = "logo"> Procastopper </h2>
+        <h2 class="logo">Procrastopper</h2>
         <nav class="menu">
-            <button class="menu-item active"> Calender</button>
-            <button class = "menu-item"> stats </button>
-            <button class = "menu-item"> settings </button>
+            <button class="menu-item active">Calendar</button>
+            <button class="menu-item">Stats</button>
+            <button class="menu-item">Settings</button>
         </nav>
     </aside>
 
+    <main class="main-content">
+        <header class="calendar-header">
+            <button id="prev-month">&#8592; Prev</button>
+            <h1 id="month-year">Today's Month</h1>
+            <button id="next-month">Next &#8594;</button>
+        </header>
 
-<!--main content area will be here-->
-<main class="main-content">
-    <header class="calender-header">
-        <button id="prev-month">&#8592; prev </button>
-        <h1 id="month-year"> october 2024 </h1>
-        <button id=" next-month"> next &#8594; </button>
-    </header>
+        <section class="calendar">
+            <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
 
-<!--days of the week-->
-<section class="calender">
-    <div class="day-name">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-    </div>
+            <div id="days-grid"></div>
+        </section>
+    </main>
 
-    <div class="days-grid" id="days-grid">
-
-    </div>
-</section>
-</main>
-
-<!-- right panel-->
- <aside class="task-panel">
-    <h3 id="selected-date">Select a Date</h3>
-    <div class="task-list">
-        <p>No schdules yet.</p>
-    </div>
-    <button id = "add-task-btn"> Add A Todo </button>
- </aside>
+    <aside class="task-panel">
+        <h3 id="selected-date">Select a Date</h3>
+        <div class="task-list">
+            <p>No schedules yet.</p>
+        </div>
+        <button id="add-task-btn">Add A Todo</button>
+    </aside>
 </div>
-
-<script src="script.js"></script>
 </body>
 </html>

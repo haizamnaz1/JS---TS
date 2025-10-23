@@ -1,167 +1,225 @@
-/* ===== Base Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  background-color: #f5f6fa;
-  color: #333;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-/* ===== App Layout ===== */
-.app-container {
-  display: grid;
-  grid-template-columns: 220px 1fr 300px;
-  height: 90vh;
-  width: 90vw;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
+        .app-container {
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            height: 100vh;
+            gap: 20px;
+            padding: 20px;
+        }
 
-/* ===== Sidebar ===== */
-.sidebar {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
 
-.logo {
-  text-align: center;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+        }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-.menu-item {
-  background: transparent;
-  border: none;
-  color: #ccc;
-  font-size: 1rem;
-  text-align: left;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
+        .menu-item {
+            padding: 15px 20px;
+            border: none;
+            background: transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+            transition: all 0.3s ease;
+            text-transform: capitalize;
+        }
 
-.menu-item:hover,
-.menu-item.active {
-  background-color: #444;
-  color: #fff;
-}
+        .menu-item:hover {
+            background: #f0f0f0;
+        }
 
-/* ===== Main Calendar Area ===== */
-.main-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
+        .menu-item.active {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
 
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
 
-.calendar-header button {
-  border: none;
-  background: #eee;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
 
-.calendar-header button:hover {
-  background: #ddd;
-}
+        .calendar-header button {
+            padding: 10px 20px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
 
-#month-year {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
+        .calendar-header button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
 
-/* ===== Calendar Grid ===== */
-.day-names, .days-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-}
+        #month-year {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+        }
 
-.day-names {
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 10px;
-}
+        .calendar {
+            width: 100%;
+        }
 
-.days-grid div {
-  padding: 10px;
-  margin: 4px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
+        .day-names {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
 
-.days-grid div:hover {
-  background-color: #e9f5ff;
-}
+        .day-names > div {
+            text-align: center;
+            font-weight: 600;
+            color: #667eea;
+            padding: 10px;
+        }
 
-/* ===== Right Task Panel ===== */
-.task-panel {
-  background-color: #fafafa;
-  border-left: 1px solid #eee;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+        #days-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
 
-#selected-date {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
+        #days-grid > div {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            background: #f8f9fa;
+        }
 
-#task-list {
-  flex-grow: 1;
-  overflow-y: auto;
-}
+        #days-grid > div:hover {
+            background: #e9ecef;
+            transform: scale(1.05);
+        }
 
-.empty {
-  color: #999;
-  font-style: italic;
-  text-align: center;
-  margin-top: 20px;
-}
+        #days-grid > div.today {
+            background: #667eea;
+            color: white;
+            font-weight: 700;
+        }
 
-#add-task-btn {
-  background-color: #0078ff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s;
-}
+        #days-grid > div.selected {
+            background: #764ba2;
+            color: white;
+        }
 
-#add-task-btn:hover {
-  background-color: #005fcc;
-}
+        .task-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        #selected-date {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .task-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .task-list p {
+            color: #999;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .task-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        #add-task-btn {
+            padding: 15px;
+            border: none;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #add-task-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1200px) {
+            .app-container {
+                grid-template-columns: 200px 1fr 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto;
+            }
+            
+            .sidebar {
+                padding: 20px;
+            }
+            
+            .menu {
+                flex-direction: row;
+            }
+        }
