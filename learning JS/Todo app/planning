@@ -1,0 +1,15 @@
+i want to create a todo app. 
+
+what is this for?
+    -for me to manage schedule, keep track of my time and reminders for the amount of procastinations i have done.
+
+how am i going to do it?
+    by using the html css and JS it is possible for me to create a working todo app with proper professional looking styling and live functionals. 
+    -using local storage to keep track of shedhules and todos.
+
+what would be the features?
+    -able to add "shedules" for whenever we want.
+    -calender base system
+        -> user will be presented a whole month in their screen, and once they press a date, it will show booked shedhule. (if there is any), and an option to add a schedule.
+    -frineldy, professional and easy to navigate UI/UX.
+    -
