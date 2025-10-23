@@ -1,0 +1,167 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== App Layout ===== */
+.app-container {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  height: 90vh;
+  width: 90vw;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: #444;
+  color: #fff;
+}
+
+/* ===== Main Calendar Area ===== */
+.main-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header button {
+  border: none;
+  background: #eee;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.calendar-header button:hover {
+  background: #ddd;
+}
+
+#month-year {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ===== Calendar Grid ===== */
+.day-names, .days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.day-names {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.days-grid div {
+  padding: 10px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.days-grid div:hover {
+  background-color: #e9f5ff;
+}
+
+/* ===== Right Task Panel ===== */
+.task-panel {
+  background-color: #fafafa;
+  border-left: 1px solid #eee;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#selected-date {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#task-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.empty {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#add-task-btn {
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+#add-task-btn:hover {
+  background-color: #005fcc;
+}

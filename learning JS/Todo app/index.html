@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="app-container">
@@ -18,14 +19,42 @@
     </aside>
 
 
+<!--main content area will be here-->
+<main class="main-content">
+    <header class="calender-header">
+        <button id="prev-month">&#8592; prev </button>
+        <h1 id="month-year"> october 2024 </h1>
+        <button id=" next-month"> next &#8594; </button>
+    </header>
 
+<!--days of the week-->
+<section class="calender">
+    <div class="day-name">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+    </div>
 
+    <div class="days-grid" id="days-grid">
 
+    </div>
+</section>
+</main>
 
-
-
-
-    
+<!-- right panel-->
+ <aside class="task-panel">
+    <h3 id="selected-date">Select a Date</h3>
+    <div class="task-list">
+        <p>No schdules yet.</p>
+    </div>
+    <button id = "add-task-btn"> Add A Todo </button>
+ </aside>
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
